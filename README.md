@@ -107,14 +107,13 @@ curl -X POST -H "Accept:application/json" -H "Content-Type:application/json" loc
  "name": "javabeer-connector",
  "config": {
  "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
- "tasks.max": "1",
  "database.hostname": "postgres",
  "database.port": "5432",
  "database.user": "postgres",
  "database.password": "postgres",
  "database.dbname" : "javabeer",
  "database.server.name": "dbserver1",
- "database.whitelist": "javabeer",
+ "table.include.list": "public.java_beer_event",
  "database.history.kafka.bootstrap.servers": "kafka:9092",
  "database.history.kafka.topic": "schema-changes.javabeer"
  }
