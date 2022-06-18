@@ -119,3 +119,14 @@ curl -X POST -H "Accept:application/json" -H "Content-Type:application/json" loc
  }
 }'
 ```
+
+
+List kafka topics
+```
+kafka-topics --bootstrap-server kafka:9092 --list
+```
+
+Connect to kafka topic
+```
+kafka-console-consumer --bootstrap-server kafka:9092 --from-beginning --topic dbserver1.public.java_beer_event
+```
