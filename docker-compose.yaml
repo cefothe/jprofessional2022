@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   postgres:
-    image: debezium/postgres
+    image: debezium/postgres:15-alpine
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
@@ -11,7 +11,7 @@ services:
       - 6532:6532
       - 5432:5432
   zookeeper:
-    image: confluentinc/cp-zookeeper
+    image: confluentinc/cp-zookeeper:latest
     ports:
       - "2181:2181"
     environment:

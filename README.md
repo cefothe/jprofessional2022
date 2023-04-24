@@ -115,6 +115,7 @@ curl -X POST -H "Accept:application/json" -H "Content-Type:application/json" loc
  "database.server.name": "dbserver1",
  "table.include.list": "public.java_beer_event",
  "database.history.kafka.bootstrap.servers": "kafka:9092",
+ "topic.prefix": "javabeer",
  "database.history.kafka.topic": "schema-changes.javabeer"
  }
 }'
@@ -128,5 +129,5 @@ kafka-topics --bootstrap-server kafka:9092 --list
 
 Connect to kafka topic
 ```
-kafka-console-consumer --bootstrap-server kafka:9092 --from-beginning --topic dbserver1.public.java_beer_event
+kafka-console-consumer --bootstrap-server kafka:9092 --from-beginning --topic javabeer.public.java_beer_event
 ```
